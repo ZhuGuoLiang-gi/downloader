@@ -305,8 +305,8 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     url = args.url
-    pro_num=args.pro_num
-    thread_num=args.thr_num
+    pro_num=int(args.pro_num)
+    thread_num=int(args.thr_num)
     path=args.out
     menory=1024*1024*100
 
