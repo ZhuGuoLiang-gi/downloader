@@ -28,7 +28,7 @@ Email:zhuguoliang001@gmail.com
 
 '''
 bioinformation database about protein、DNA、RNA:
-structure 3D website:
+structure or sequences information website:
 uniprot website:https://www.uniprot.org/help/downloads
     Embeddings:
         Reviewed (Swiss-Prot)	https://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/embeddings/uniprot_sprot/per-protein.h5
@@ -303,8 +303,7 @@ if __name__ == "__main__":
     
     
     url='https://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/taxonomic_divisions/uniprot_trembl_viruses.dat.gz'
-    #url='https://files.rcsb.org/download/8H3H.pdb'
-    #url='https://github.com/realbigws/DeepAlign/archive/refs/heads/master.zip'
+
     pro_num=4
     thread_num=30
     path='/Users/zgl/myapp/downloader/test'
