@@ -10,11 +10,7 @@ import psutil
 import time
 import datetime
 from rich.progress import Progress
-
-
-
-
-
+import argparse
 
 
 
@@ -299,18 +295,22 @@ def main(file,pro_num,thread_num):
 
 if __name__ == "__main__":
     
-    start_time=time.time()
+    parser = argparse.ArgumentParser(description="this is a download tool to download huge file faster")
     
-    
-    url='https://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/taxonomic_divisions/uniprot_trembl_viruses.dat.gz'
+    parser.add_argument('-u', '--url', dest='url', required=True, help='input downloaded file address')
+    parser.add_argument('-o', '--output', dest='out'd,efault="./",help='download file to path')
+    parser.add_argument('-p','--pro_num',dest='pro_num',default=4,help='set processes number')
+    parser.add_argument('-t','--thr_num',dest='thr_num',default=10,help='set thread number')
 
-    pro_num=4
-    thread_num=30
-    path='/Users/zgl/myapp/downloader/test'
+    args = parser.parse_args()
+
+    url = args.url
+    pro_num=args.pro_num
+    thread_num=args.thr_num
+    path=args.out
     menory=1024*1024*100
 
-
-    
+    start_time=time.time()
     response = requests.head(url)
     fild_name = url.split("/")[-1]
     try:
@@ -341,13 +341,10 @@ if __name__ == "__main__":
             exit()
         
         main(file,pro_num,thread_num)
-        
-
-    
     
     end_time = time.time()
     execution_time = end_time - start_time
-    min=execution_time/60
+    min=execution_time / 60
     print(f'running time: {min:.2f} min')
     
 
