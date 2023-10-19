@@ -298,7 +298,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="this is a download tool to download huge file faster")
     
     parser.add_argument('-u','--url',dest='url',required=True, help='input downloaded file address')
-    parser.add_argument('-o','--out',dest='out',fault="./",help='download file to path')
+    parser.add_argument('-o','--out',dest='out',default="./",help='download file to path')
     parser.add_argument('-p','--pro_num',dest='pro_num',default=4,help='set processes number')
     parser.add_argument('-t','--thr_num',dest='thr_num',default=10,help='set thread number')
 
