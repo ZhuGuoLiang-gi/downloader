@@ -2,7 +2,7 @@
 
 
 
-**this is a download tool to download file faster !**
+**this is a download tool to download huge file faster !**
 
 
 **usage:**
