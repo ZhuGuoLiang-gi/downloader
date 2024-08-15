@@ -17,7 +17,6 @@ To get started, clone the repository and install any necessary dependencies:
 ```bash
 git clone https://github.com/ZhuGuoLiang-gi/downloader.git
 cd downloader
-pip install -r requirements.txt
 ```
 
 ## Usage, Parameters, and Example
@@ -49,5 +48,3 @@ Contributions are welcome! If you have ideas for improvements or new features, f
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 ```
-
-Feel free to adjust the content to better fit your project's specifics or personal preferences!
